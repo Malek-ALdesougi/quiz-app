@@ -1,0 +1,519 @@
+{
+    "sport": [
+        {
+            "question": "What is the highest score in a single game in NBA history?",
+            "options": [
+                "100 points",
+                "81 points",
+                "73 points",
+                "68 points"
+            ],
+            "answer": "100 points"
+        },
+        {
+            "question": "Who won the FIFA World Cup in 2018?",
+            "options": [
+                "Germany",
+                "Brazil",
+                "Spain",
+                "France"
+            ],
+            "answer": "France"
+        },
+        {
+            "question": "In what year did Michael Jordan retire from the NBA for the second time?",
+            "options": [
+                "1998",
+                "2000",
+                "2002",
+                "2004"
+            ],
+            "answer": "1998"
+        },
+        {
+            "question": "What is the most popular sport in Brazil?",
+            "options": [
+                "Soccer",
+                "Volleyball",
+                "Basketball",
+                "Tennis"
+            ],
+            "answer": "Soccer"
+        },
+        {
+            "question": "Who holds the record for the most home runs in a single season in MLB?",
+            "options": [
+                "Babe Ruth",
+                "Barry Bonds",
+                "Mark McGwire",
+                "Roger Maris"
+            ],
+            "answer": "Barry Bonds"
+        },
+        {
+            "question": "Which country hosted the 2016 Summer Olympics?",
+            "options": [
+                "Japan",
+                "China",
+                "Brazil",
+                "South Korea"
+            ],
+            "answer": "Brazil"
+        },
+        {
+            "question": "Who won the men's singles title at Wimbledon in 2019?",
+            "options": [
+                "Rafael Nadal",
+                "Novak Djokovic",
+                "Roger Federer",
+                "Andy Murray"
+            ],
+            "answer": "Novak Djokovic"
+        },
+        {
+            "question": "What is the only country to have won the Rugby World Cup three times?",
+            "options": [
+                "South Africa",
+                "New Zealand",
+                "Australia",
+                "England"
+            ],
+            "answer": "New Zealand"
+        },
+        {
+            "question": "Who was the first woman to run the Boston Marathon?",
+            "options": [
+                "Katherine Switzer",
+                "Joan Benoit",
+                "Grete Waitz",
+                "Mary Decker"
+            ],
+            "answer": "Katherine Switzer"
+        },
+        {
+            "question": "Which country has won the most gold medals in Olympic basketball?",
+            "options": [
+                "USA",
+                "Soviet Union",
+                "China",
+                "Spain"
+            ],
+            "answer": "USA"
+        }
+    ],
+    "math": [
+        {
+            "question": "What is the result of 5 * 3 + 7?",
+            "options": [
+                "22",
+                "25",
+                "28",
+                "31"
+            ],
+            "answer": "22"
+        },
+        {
+            "question": "What is the value of pi (to 2 decimal places)?",
+            "options": [
+                "3.12",
+                "3.14",
+                "3.16",
+                "3.18"
+            ],
+            "answer": "3.14"
+        },
+        {
+            "question": "What is the square root of 144?",
+            "options": [
+                "12",
+                "44",
+                "20",
+                "1"
+            ],
+            "answer": "12"
+        },
+        {
+            "question": "What is the result of 1 + 1 + 1?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "What is the result of 1 * 1 ?",
+            "options": [
+                "1",
+                "11",
+                "100",
+                "0"
+            ],
+            "answer": "1"
+        },
+        {
+            "question": "What is the value of 5 factorial (5!)?",
+            "options": [
+                "10",
+                "20",
+                "120",
+                "720"
+            ],
+            "answer": "120"
+        },
+        {
+            "question": "What is the slope of a horizontal line?",
+            "options": [
+                "0",
+                "1",
+                "Infinity",
+                "Undefined"
+            ],
+            "answer": "0"
+        },
+        {
+            "question": "What is the midpoint between (-3, 4) and (5, 2)?",
+            "options": [
+                "(1, 3)",
+                "(1, -1)",
+                "(2, 3)",
+                "(2, -1)"
+            ],
+            "answer": "(1, 3)"
+        },
+        {
+            "question": "What is the circumference of a circle with a radius of 6?",
+            "options": [
+                "12π",
+                "18π",
+                "24π",
+                "36π"
+            ],
+            "answer": "12π"
+        },
+        {
+            "question": "What is the circumference of a circle with a radius of 6?",
+            "options": [
+                "12π",
+                "18π",
+                "24π",
+                "36π"
+            ],
+            "answer": "12π"
+        }
+    ],
+    "history": [
+        {
+            "question": "Who was the first president of the United States?",
+            "options": [
+                "George Washington",
+                "John Adams",
+                "Thomas Jefferson",
+                "James Madison"
+            ],
+            "answer": "George Washington"
+        },
+        {
+            "question": "Which country did the United States gain independence from?",
+            "options": [
+                "France",
+                "Spain",
+                "Great Britain",
+                "Portugal"
+            ],
+            "answer": "Great Britain"
+        },
+        {
+            "question": "What was the name of the first permanent English settlement in North America?",
+            "options": [
+                "Plymouth",
+                "Jamestown",
+                "Roanoke",
+                "Salem"
+            ],
+            "answer": "Jamestown"
+        },
+        {
+            "question": "What was the main cause of World War II?",
+            "options": [
+                "The Treaty of Versailles",
+                "The Great Depression",
+                "The Rise of Fascism",
+                "The Russian Revolution"
+            ],
+            "answer": "The Rise of Fascism"
+        },
+        {
+            "question": "Which country did the United States fight against in the Vietnam War?",
+            "options": [
+                "North Korea",
+                "South Korea",
+                "North Vietnam",
+                "South Vietnam"
+            ],
+            "answer": "North Vietnam"
+        },
+        {
+            "question": "Which ancient civilization was known for building pyramids?",
+            "options": [
+                "Greek",
+                "Roman",
+                "Egyptian",
+                "Babylonian"
+            ],
+            "answer": "Egyptian"
+        },
+        {
+            "question": "What event led to the start of World War I?",
+            "options": [
+                "The assassination of Archduke Franz Ferdinand",
+                "The sinking of the Lusitania",
+                "The invasion of Poland",
+                "The bombing of Pearl Harbor"
+            ],
+            "answer": "The assassination of Archduke Franz Ferdinand"
+        },
+        {
+            "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+            "options": [
+                "Vladimir Putin",
+                "Mikhail Gorbachev",
+                "Leonid Brezhnev",
+                "Nikita Khrushchev"
+            ],
+            "answer": "Nikita Khrushchev"
+        },
+        {
+            "question": "What was the name of the famous speech given by Martin Luther King Jr.?",
+            "options": [
+                "I Have a Dream",
+                "The Gettysburg Address",
+                "The Emancipation Proclamation",
+                "The Declaration of Independence"
+            ],
+            "answer": "I Have a Dream"
+        },
+        {
+            "question": "What was the name of the ancient Greek philosopher who taught Alexander the Great?",
+            "options": [
+                "Plato",
+                "Aristotle",
+                "Socrates",
+                "Heraclitus"
+            ],
+            "answer": "Aristotle"
+        }
+    ],
+    "science": [
+        {
+            "question": "What is the smallest unit of matter?",
+            "options": [
+                "Atom",
+                "Molecule",
+                "Cell",
+                "Organ"
+            ],
+            "answer": "Atom"
+        },
+        {
+            "question": "What is the process by which plants convert sunlight into energy?",
+            "options": [
+                "Photosynthesis",
+                "Respiration",
+                "Digestion",
+                "Evaporation"
+            ],
+            "answer": "Photosynthesis"
+        },
+        {
+            "question": "What is the name of the force that pulls objects towards the center of the Earth?",
+            "options": [
+                "Friction",
+                "Gravity",
+                "Magnetism",
+                "Electromagnetism"
+            ],
+            "answer": "Gravity"
+        },
+        {
+            "question": "What is the process by which a liquid turns into a gas?",
+            "options": [
+                "Condensation",
+                "Melting",
+                "Evaporation",
+                "Sublimation"
+            ],
+            "answer": "Evaporation"
+        },
+        {
+            "question": "What is the name of the smallest type of blood vessel?",
+            "options": [
+                "Artery",
+                "Vein",
+                "Capillary",
+                "Ventricle"
+            ],
+            "answer": "Capillary"
+        },
+        {
+            "question": "What is the name of the layer of the Earth's atmosphere that contains the ozone layer?",
+            "options": [
+                "Troposphere",
+                "Stratosphere",
+                "Mesosphere",
+                "Thermosphere"
+            ],
+            "answer": "Stratosphere"
+        },
+        {
+            "question": "What is the name of the process by which the Earth's magnetic field reverses?",
+            "options": [
+                "Magnetic field reversal",
+                "Geomagnetic inversion",
+                "Pole reversal",
+                "Magnetic flip"
+            ],
+            "answer": "Geomagnetic inversion"
+        },
+        {
+            "question": "What is the process by which a solid turns directly into a gas?",
+            "options": [
+                "Condensation",
+                "Melting",
+                "Evaporation",
+                "Sublimation"
+            ],
+            "answer": "Sublimation"
+        },
+        {
+            "question": "What is the name of the type of energy that comes from the motion of waves?",
+            "options": [
+                "Thermal energy",
+                "Kinetic energy",
+                "Sound energy",
+                "Radiant energy"
+            ],
+            "answer": "Radiant energy"
+        },
+        {
+            "question": "What is the name of the process by which a gas turns into a liquid?",
+            "options": [
+                "Condensation",
+                "Melting",
+                "Evaporation",
+                "Sublimation"
+            ],
+            "answer": "Condensation"
+        }
+    ],
+
+
+
+
+
+
+
+    "random": [
+        {
+            "question": "What is the name of the toy cowboy in the movie Toy Story?",
+            "options": [
+                "Woody",
+                "Buzz",
+                "Rex",
+                "Slinky"
+            ],
+            "answer": "Woody"
+        },
+        {
+            "question": "What is the name of the lead singer of the band Coldplay?",
+            "options": [
+                "Chris Martin",
+                "Adam Levine",
+                "Dave Grohl",
+                "Brandon Flowers"
+            ],
+            "answer": "Chris Martin"
+        },
+        {
+            "question": "What is the capital city of Australia?",
+            "options": [
+                "Sydney",
+                "Melbourne",
+                "Brisbane",
+                "Canberra"
+            ],
+            "answer": "Canberra"
+        },
+        {
+            "question": "What is the name of the highest mountain in Africa?",
+            "options": [
+                "Mount Everest",
+                "Mount Kilimanjaro",
+                "Mount McKinley",
+                "Mount Fuji"
+            ],
+            "answer": "Mount Kilimanjaro"
+        },
+        {
+            "question": "What is the name of the largest planet in our solar system?",
+            "options": [
+                "Mars",
+                "Venus",
+                "Jupiter",
+                "Saturn"
+            ],
+            "answer": "Jupiter"
+        },
+        {
+            "question": "What is the name of the famous clock tower in London?",
+            "options": [
+                "Big Ben",
+                "The Shard",
+                "The Gherkin",
+                "Tower Bridge"
+            ],
+            "answer": "Big Ben"
+        },
+        {
+            "question": "What is the name of the process by which plants release water vapor through their leaves?",
+            "options": [
+                "Photosynthesis",
+                "Respiration",
+                "Digestion",
+                "Transpiration"
+            ],
+            "answer": "Transpiration"
+        },
+        {
+            "question": "What is the name of the famous university located in New Haven, Connecticut?",
+            "options": [
+                "Harvard",
+                "Princeton",
+                "Yale",
+                "Stanford"
+            ],
+            "answer": "Yale"
+        },
+        {
+            "question": "What is the name of the famous bridge that connects San Francisco to Marin County?",
+            "options": [
+                "Golden Gate Bridge",
+                "Brooklyn Bridge",
+                "Tower Bridge",
+                "Sydney Harbour Bridge"
+            ],
+            "answer": "Golden Gate Bridge"
+        },
+        {
+            "question": "What is the name of the world's largest desert?",
+            "options": [
+                "Sahara",
+                "Gobi",
+                "Kalahari",
+                "Antarctica"
+            ],
+            "answer": "Sahara"
+        }
+    ]
+}
