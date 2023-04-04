@@ -1,30 +1,59 @@
+import React, { useEffect, useState } from 'react';
 // mdb bootsrtap
-import React from 'react';
 import {
   MDBCard,
   MDBCardBody,
   MDBCardTitle,
-  MDBCardText,
   MDBCardImage,
-  MDBBtn
+  MDBBtn,
 } from 'mdb-react-ui-kit';
+//styles
+import styles from './style.module.css'
 
 function QuizesCards() {
-    
-    return ( <div className='row'>
-        <div className='col-md-12 p-5'>
-        <MDBCard className='w-25'>
-         <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/184.webp' position='top' alt='...' />
-         <MDBCardBody>
-           <MDBCardTitle>Card title</MDBCardTitle>
-           {/* <MDBCardText>
-             Some quick example text to build on the card title and make up the bulk of the card's content.
-           </MDBCardText> */}
-           <MDBBtn href='#'>Button</MDBBtn>
-         </MDBCardBody>
-    </MDBCard>
+  const [quizes, setQuizes] = useState();
+
+  useEffect(() => {
+    fetch('quizes.json')
+      .then((resp) => resp.json())
+      .then((data) => setQuizes(data));
+  }, []);
+
+
+  return (
+    <div className="row w-100">
+      <div className="col-md-12 d-flex justify-content-center flex-column gap-4">
+        <h1 className="text-center">Choose A Quiz</h1>
+        <div className="d-flex flex-wrap gap-4 justify-content-center">
+          {quizes
+            ? Object.keys(quizes)?.map((key, index) => {
+                return (
+                  <MDBCard id={styles.topicCard} key={index} className="w-25 bg-dark">
+                    <MDBCardImage
+                    height={'210px'}
+                      src={`images/${key}.jpg`}
+                      position="top"
+                      alt="..."
+                    />
+                    <MDBCardBody>
+                      <MDBCardTitle className="fs-3 fw-6 text-light">
+                       Topic: {key}
+                      </MDBCardTitle>
+                      {/* <MDBCardText>
+               Some quick example text to build on the card title and make up the bulk of the card's content.
+              </MDBCardText> */}
+                      <MDBBtn className="btn btn-danger text-dark fw-bold" href="#">
+                        Give it a try
+                      </MDBBtn>
+                    </MDBCardBody>
+                  </MDBCard>
+                );
+              })
+            : ''}
+        </div>
+      </div>
     </div>
-    </div> );
+  );
 }
 
 export default QuizesCards;
