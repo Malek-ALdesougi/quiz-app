@@ -18,6 +18,7 @@ function SingleQuestion({ question, prev, next }) {
 
   const answersInputs = useRef([]);
   const currentUserAnswer = useRef('');
+  const questionNo = useRef(0);
   const dispatch = useDispatch();
   const { points } = useSelector((state) => state);
   const navigate = useNavigate();
@@ -25,12 +26,17 @@ function SingleQuestion({ question, prev, next }) {
   const [checkPrev, setCheckPrev] = useState(false);
 
 
+  // TODO: switch the fetch data to the redux and create new reducer for it 
+  // TODO: handle previw correct answers or preview users answers and the correct
+  // TODO: 1 out of 10 
+
   function handleNext() {
     //check if user didn't check any answer
     answersInputs.current.map((input) => {
       if (input?.checked === true) {
         next();
         input.checked = false;
+        questionNo.current ++ ;
       }
     });
 
@@ -44,6 +50,7 @@ function SingleQuestion({ question, prev, next }) {
 
   function handlePrev(){
     prev();
+    questionNo.current --;
     if(checkPrev){
       dispatch(removePoint());
       setCheckPrev(false)
@@ -58,6 +65,8 @@ function SingleQuestion({ question, prev, next }) {
     <div className={styles.container}>
       {question ? (
         <div className='w-100'>
+          <p className='text-warning'>Question {questionNo.current} / 10</p>
+          <hr />
           <p className='text-danger fw-bold fs-5'>{question?.question}</p>
           {question?.options.map((option, index) => {
             return (
