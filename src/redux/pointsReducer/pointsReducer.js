@@ -10,7 +10,9 @@ export const pointsReducer = (state = initState, action) => {
         case POINTS_CONSTANTS.CHECKING_ANSWER:
             return { ...state, loading: true };
         case POINTS_CONSTANTS.CORRECT_ANSWER:
-            return { ...state, points: state.points + 1, loading: false}
+            return { ...state, points: state.points + 1, loading: false }
+        case POINTS_CONSTANTS.PREVIOUS_QUSTION:
+            return { ...state, points: state.points - 1, loading: false }
         default:
             return state;
     }

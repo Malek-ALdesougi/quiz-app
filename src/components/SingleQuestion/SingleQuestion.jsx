@@ -2,7 +2,7 @@
 import styles from './style.module.css'
 
 //react
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 //navigation
 import { useNavigate } from 'react-router';
@@ -11,26 +11,25 @@ import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 
 //functions
-import { checkUserAnswer, addPoint } from '../../redux/pointsReducer/action';
+import { checkUserAnswer, addPoint, removePoint } from '../../redux/pointsReducer/action';
 
-function SingleQuestion({ question, moveToNextQuestion }) {
+
+function SingleQuestion({ question, prev, next }) {
+
   const answersInputs = useRef([]);
   const currentUserAnswer = useRef('');
   const dispatch = useDispatch();
   const { points } = useSelector((state) => state);
   const navigate = useNavigate();
+  //flag to remove point if the previous answer was correct
+  const [checkPrev, setCheckPrev] = useState(false);
 
-  console.log(points);
-
-  //   TODO: dispatch
-  //   TODO: handle next button on the_questions number
-  //   TODO: the number of question 9 out of 10
 
   function handleNext() {
     //check if user didn't check any answer
     answersInputs.current.map((input) => {
       if (input?.checked === true) {
-        moveToNextQuestion();
+        next();
         input.checked = false;
       }
     });
@@ -38,7 +37,16 @@ function SingleQuestion({ question, moveToNextQuestion }) {
     dispatch(checkUserAnswer());
 
     if (currentUserAnswer.current === question.answer) {
+      setCheckPrev(true);
       dispatch(addPoint());
+    }
+  }
+
+  function handlePrev(){
+    prev();
+    if(checkPrev){
+      dispatch(removePoint());
+      setCheckPrev(false)
     }
   }
 
@@ -49,7 +57,7 @@ function SingleQuestion({ question, moveToNextQuestion }) {
   return (
     <div className={styles.container}>
       {question ? (
-        <div>
+        <div className='w-100'>
           <p className='text-danger fw-bold fs-5'>{question?.question}</p>
           {question?.options.map((option, index) => {
             return (
@@ -61,7 +69,10 @@ function SingleQuestion({ question, moveToNextQuestion }) {
             );
           })}
 
+        <div className='d-flex justify-content-center w-100 gap-5'>
+         <button className='btn btn-light mt-4' onClick={handlePrev}>Previous</button>
          <button className='btn btn-light mt-4' onClick={handleNext}>Next</button>
+        </div>
         </div>
       ) : (
         <div className='d-flex justify-content-center flex-wrap h-100 p-5 w-100'>
