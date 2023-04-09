@@ -13,6 +13,12 @@ function SingleQuiz() {
     setCurretnQuestion(currentQuestion + 1)
   }
 
+  function backToPreviousQuestion(){
+    if(currentQuestion !== 0){
+      setCurretnQuestion(currentQuestion - 1)
+    }
+  }
+
   useEffect(() => {
     fetch('../quizes.json')
       .then((resp) => resp.json())
@@ -23,7 +29,8 @@ function SingleQuiz() {
     <div className={styles.container}>
       <div className={styles.questionContainer}>
         {currentQuiz ? (
-          <SingleQuestion moveToNextQuestion={moveToNextQuestion} question={currentQuiz[currentQuestion]} />
+          <SingleQuestion question={currentQuiz[currentQuestion]} next={moveToNextQuestion} prev={backToPreviousQuestion} 
+          />
         ) : (
           ''
         )}

@@ -7,3 +7,7 @@ export const checkUserAnswer = () => (dipatch) => {
 export const addPoint = () => (dispatch) => {
     dispatch({type: POINST_CONSTANTS.CORRECT_ANSWER})
 }
+
+export const removePoint = () => (dispatch) => {
+    dispatch({type:POINST_CONSTANTS.PREVIOUS_QUSTION})
+}
