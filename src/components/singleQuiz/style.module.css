@@ -5,8 +5,9 @@
 }
 
 .questionContainer {
-    width: auto;
-    height: auto;
-    padding:15px;
-    background-color: red;
+    width: 480px;
+    height: 350px;
+    padding:35px;
+    background-color: #332D2D;
+    border-radius: 10px;
 }
