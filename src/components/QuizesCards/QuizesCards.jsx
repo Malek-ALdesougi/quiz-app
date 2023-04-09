@@ -9,6 +9,7 @@ import {
 } from 'mdb-react-ui-kit';
 //styles
 import styles from './style.module.css'
+import { Link } from 'react-router-dom';
 
 function QuizesCards() {
   const [quizes, setQuizes] = useState();
@@ -33,18 +34,16 @@ function QuizesCards() {
                     height={'210px'}
                       src={`images/${key}.jpg`}
                       position="top"
-                      alt="..."
-                    />
+                      alt="..."/>
                     <MDBCardBody>
                       <MDBCardTitle className="fs-3 fw-6 text-light">
                        Topic: {key}
                       </MDBCardTitle>
-                      {/* <MDBCardText>
-               Some quick example text to build on the card title and make up the bulk of the card's content.
-              </MDBCardText> */}
-                      <MDBBtn className="btn btn-danger text-dark fw-bold" href="#">
-                        Give it a try
-                      </MDBBtn>
+                        <Link className={styles.singleButtonText} to={`/single/${key}`}>
+                            <MDBBtn className="btn btn-danger text-dark fw-bold">
+                                Give it a try
+                            </MDBBtn>
+                          </Link>
                     </MDBCardBody>
                   </MDBCard>
                 );

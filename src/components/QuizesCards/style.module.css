@@ -8,3 +8,10 @@ h1{
     font-weight: 900;
     color:white ;
 }
+
+.singleButtonText{
+    color:black;
+}
+.singleButtonText:hover{
+    color: black;
+}
