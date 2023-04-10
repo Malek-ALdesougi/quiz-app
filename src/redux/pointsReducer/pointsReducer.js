@@ -13,6 +13,8 @@ export const pointsReducer = (state = initState, action) => {
             return { ...state, points: state.points + 1, loading: false }
         case POINTS_CONSTANTS.PREVIOUS_QUSTION:
             return { ...state, points: state.points - 1, loading: false }
+        case POINTS_CONSTANTS.RESET_POINTS:
+            return { ...state, points: 0 }
         default:
             return state;
     }

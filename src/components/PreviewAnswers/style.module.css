@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.questionContainer {
+  width: 480px;
+  height: 350px;
+  padding: 35px;
+  background-color: #332d2d;
+  border-radius: 10px;
+}

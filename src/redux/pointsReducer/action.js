@@ -11,3 +11,7 @@ export const addPoint = () => (dispatch) => {
 export const removePoint = () => (dispatch) => {
     dispatch({type:POINST_CONSTANTS.PREVIOUS_QUSTION})
 }
+
+export const resetPoints = () => (dispatch) => {
+    dispatch({type: POINST_CONSTANTS.RESET_POINTS})
+}
