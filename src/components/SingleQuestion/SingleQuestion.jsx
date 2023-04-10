@@ -5,13 +5,13 @@ import styles from './style.module.css'
 import { useRef, useState } from 'react';
 
 //navigation
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 
 //redux
 import { useDispatch, useSelector } from 'react-redux';
 
 //functions
-import { checkUserAnswer, addPoint, removePoint } from '../../redux/pointsReducer/action';
+import { checkUserAnswer, addPoint, removePoint, resetPoints } from '../../redux/pointsReducer/action';
 
 
 function SingleQuestion({ question, prev, next }) {
@@ -22,13 +22,15 @@ function SingleQuestion({ question, prev, next }) {
   const dispatch = useDispatch();
   const { points } = useSelector((state) => state);
   const navigate = useNavigate();
+  const {quiz} = useParams('quiz');
+  // const userAnswers = useRef([]);
+
   //flag to remove point if the previous answer was correct
   const [checkPrev, setCheckPrev] = useState(false);
 
 
   // TODO: switch the fetch data to the redux and create new reducer for it 
   // TODO: handle previw correct answers or preview users answers and the correct
-  // TODO: 1 out of 10 
 
   function handleNext() {
     //check if user didn't check any answer
@@ -36,7 +38,7 @@ function SingleQuestion({ question, prev, next }) {
       if (input?.checked === true) {
         next();
         input.checked = false;
-        questionNo.current ++ ;
+        questionNo.current ++;
       }
     });
 
@@ -61,6 +63,11 @@ function SingleQuestion({ question, prev, next }) {
     currentUserAnswer.current = userAnswer;
   }
 
+  function handleBackHome(){
+    dispatch(resetPoints());
+    navigate('/');
+  }
+
   return (
     <div className={styles.container}>
       {question ? (
@@ -79,15 +86,16 @@ function SingleQuestion({ question, prev, next }) {
           })}
 
         <div className='d-flex justify-content-center w-100 gap-5'>
-         <button className='btn btn-light mt-4' onClick={handlePrev}>Previous</button>
+         {questionNo.current !== 0 ? <button className='btn btn-light mt-4' onClick={handlePrev}>Previous</button> : ''}
          <button className='btn btn-light mt-4' onClick={handleNext}>Next</button>
         </div>
         </div>
       ) : (
         <div className='d-flex justify-content-center flex-wrap h-100 p-5 w-100'>
           <h2 className='mb-5 text-danger'>Your Score is : {points}/10</h2> 
-          <div className='d-flex justify-content-center w-100'>
-            <button className='btn btn-light' onClick={() => navigate('/')}>Back Home</button>
+          <div className='d-flex gap-3 justify-content-center w-100'>
+            <button className='btn btn-light' onClick={handleBackHome}>Back Home</button>
+            <button className='btn btn-light' onClick={() => navigate(`/preview/${quiz}`)}>Preview Answers</button>
           </div>
         </div>
       )}
